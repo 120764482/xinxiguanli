@@ -3,11 +3,10 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="../styles/login.css"/>
-	<script type="text/javascript" src="../../bower_components/jquery/dist/jquery.min.js" ></script>
+	
 </head>
 <body>
-	<div class="box">
+	<div ng-controller="loginCtrl" class="box">
 		<div class="conDivv">
 			<ul>
 				<li class="clearfix"><h3>登&nbsp;陆</h3></li>
@@ -41,11 +40,10 @@
 				</li>
 				<li class="clearfix">
 					<div class="login" href="javascript:;">登陆</div>
-					<p class="ppp">还没有用户ID<a href="resgin.html">注册新用户</a></p>
+					<p class="ppp">还没有用户ID<a ui-sref="resgin">注册新用户</a></p>
 				</li>
 			</ul>
 		</div>
 	</div>
 </body>
-<script src="../scripts/login.js"></script>
 </html>

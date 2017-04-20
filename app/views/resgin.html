@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Document</title>
-	<link rel="stylesheet" href="../styles/resgin.css" />
+	
 </head>
 <body>
-	<div class="box">
+	<div ng-controller="resginCtrl" class="box">
 		<div class="conDiv">
 			<ul class="ul">
 				<li class="clearfix li"><h3>注&nbsp;册</h3></li>
@@ -44,7 +44,7 @@
 				</li>
 				<li class="clearfix li">
 					<div class="login" href="javascript:;">提交</div>
-					<p class="ppp">已有用户ID<a href="login.html">立即登陆</a></p>
+					<p class="ppp">已有用户ID<a ui-sref="login">立即登陆</a></p>
 				</li>
 			</ul>
 		</div>
