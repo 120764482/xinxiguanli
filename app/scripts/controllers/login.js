@@ -78,11 +78,11 @@ angular.module('xinxiApp')
 							setTimeout(function() {
 								$('.zhe').css('display', 'none');
 							}, 1000);
-//							if($scope.state == 0) {
-//								location.href = ''
-//							} else if($scope.state == 1) {
-//								location.href = ''
-//							}
+							if($scope.state == 0) {
+								//location.href = ''
+							} else if($scope.state == 1) {
+								location.href = 'views/yrkye.html'
+							}
 						} else if(data.flag == '3') {
 							$('.zhe').css('display', 'block').html('密码错误');
 							setTimeout(function() {
