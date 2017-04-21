@@ -29,9 +29,9 @@
 						</ul>
 					</nav>
 				</div>
-				<!--yrk_small_nav-->
+				<!--yrk_small_nav结束-->
 			</div>
-			<!--yrkbox_conter-->
+			<!--yrkbox_conter结束-->
 			
 				<div class="yrk_small">
 					<div class="yrk_small_left">
@@ -60,14 +60,20 @@
 									<th>班级</th>
 									<th>性别</th>
 									<th>手机号</th>
-									<th>详情</th>
+									<th style="width: 240px;">编辑</th>
 								</tr>
 								<tr>
 									<td></td>
 									<td></td>
 									<td></td>
 									<td></td>
-									<td></td>
+									<td>
+										<button class="add">添加</button>
+										<button>修改</button>
+										<button>详情</button>
+										<button>删除</button>
+										
+									</td>
 								</tr>
 							</table>
 						</div>
@@ -80,7 +86,7 @@
 	<script type="text/javascript">
 			$(function(){
 				
-				$(".image").bind("click", function(){
+				$(".image").addEventListener("click", function(){
 				$("#file").click();
 				$("#file").addEventListener("change", function(){
 					var files = this.files[0],//加载处理图片
@@ -92,7 +98,20 @@
 				}, false)
 			}, false)
 					
+			//列表
+			$.ajax({
+				type:"get",
+				url:"http://localhost:3560/list/list",
+				async:true,
+				success:function(data){
 					
+					
+				},
+				error:function(){
+					alert('链接失败')
+				}
+			});
+			
 					
 			})
 		
