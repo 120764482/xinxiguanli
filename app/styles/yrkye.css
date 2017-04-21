@@ -302,9 +302,9 @@ img {
 .yrk_small_right_top button{
 	width: 80px;
 	height: 30px;
-	background: #CB311C;
+	background: #37be57;
 	color: #fff;
-	border: 1px solid #CB311C;
+	border: 1px solid #37be57;
 	position: absolute;
 	top: 6px;
 	right: 24.02%;
@@ -318,4 +318,11 @@ img {
 }
 .yrk_small_right_bottom table th{
 	height: 40px;
+}
+.yrk_small_right_bottom table td button{
+	width: 54px;
+	height: 30px;
+	background: #37be57;
+	border: 1px solid #37be57;
+	border-radius: 5px;
 }
