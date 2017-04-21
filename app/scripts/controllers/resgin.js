@@ -38,7 +38,7 @@ angular.module('xinxiApp')
 
 		$(".login").click(function() {
 			$.ajax({
-				url: "http://192.168.43.238/login/zhuce",
+				url: "http://192.168.43.238:3560/login/zhuce",
 				type: "post",
 				data: {
 					Name: $('.Name').val(),
@@ -49,6 +49,7 @@ angular.module('xinxiApp')
 					grade: $('.banji').val()
 				},
 				success: function(data) {
+					console.log(data)
 //					if(data.flag == '1') {
 //						alert('注册成功')
 //							//window.location.href = "login.html"
