@@ -30,45 +30,93 @@ angular.module('xinxiApp')
 			}
 		}
 
-		
-			//用户名验证
-//		var name = /^[a-zA-Z]\w{3,15}$/ig; //用户名验证
-//		$(".input1").blur(function() {
-//			if($(this).val().match(name)) {
-//				$('.dui').css('display', 'block')
-//
-//			} else if($(this).val() == null) {
-//				$('.dui').css('display', 'none')
-//				$('.conDivv .zhe').css('display', 'block').text('用户名不正确');
-//				setInterval(function() {
-//					$('.conDivv .zhe').css('display', 'none').text('用户名不正确');
-//				}, 2000)
-//
-//			} else {
-//				$('.dui').css('display', 'none')
-//				$('.conDivv .zhe').css('display', 'block').text('用户名不正确');
-//				setInterval(function() {
-//					$('.conDivv .zhe').css('display', 'none').text('用户名不正确');
-//				}, 2000)
-//			}
-//		})
-//
-//		var psd = /^[a-zA-Z]\w{5,17}$/; //密码验证
-//		$("#psd").blur(function() {
-//			if($(this).val().match(psd)) {
-//				$('.dui1').css('display', 'block')
-//			} else {
-//				$('.dui1').css('display', 'none')
-//				$('.conDivv .zhe').css('display', 'block').text('密码不正确');
-//				setInterval(function() {
-//					$('.conDivv .zhe').css('display', 'none').text('密码不正确');
-//				}, 2000)
-//			}
-//		})
-        $scope.student = '0';
+		$scope.student = '0';
 		$scope.theach = '1';
+<<<<<<< HEAD
+		$scope.state = '';
+		$scope.validateCode = function() {
+			if($('#inputCode').val() <= 0) {
+				$('.zhe').css('display', 'block').html('请输入验证码');
+				createCode();
+				setTimeout(function() {
+					$('.zhe').css('display', 'none');
+				}, 2000)
+				return false;
+			} else if($('#inputCode').val().toUpperCase() != code.toUpperCase()) {
+				$('.zhe').css('display', 'block').html('验证码输入有误');
+				createCode();
+				setTimeout(function() {
+					$('.zhe').css('display', 'none');
+				}, 2000)
+			} else {
+				return true;
+			}
+		}
+		$(".login").click(function() {
+			if($('.input1').val() == '') {
+				$('.zhe').css('display', 'block').html('请填写用户名');
+				setTimeout(function() {
+					$('.zhe').css('display', 'none');
+				}, 1000)
+			} else if($('.input2').val() == '') {
+				$('.zhe').css('display', 'block').html('请填写密码');
+				setTimeout(function() {
+					$('.zhe').css('display', 'none');
+				}, 1000)
+			} else if($scope.validateCode()) {
+				localStorage.user = $('.input1').val();
+				$.ajax({
+					url: "http://192.168.43.238:3560/login/denglu",
+					type: "post",
+					data: {
+						password: $(".input2").val(),
+						account: $('.input1').val(),
+						jurisdiction: $scope.state
+					},
+					success: function(data) {
+						if(data.flag == '1') {
+							$('.zhe').css('display', 'block').html('登陆成功');
+							setTimeout(function() {
+								$('.zhe').css('display', 'none');
+							}, 1000);
+							if($scope.state == 0) {
+								//location.href = ''
+							} else if($scope.state == 1) {
+								location.href = 'views/yrkye.html'
+							}
+						} else if(data.flag == '3') {
+							$('.zhe').css('display', 'block').html('密码错误');
+							setTimeout(function() {
+								$('.zhe').css('display', 'none');
+							}, 1000)
+						} else if(data.flag == '5') {
+							$('.zhe').css('display', 'block').html('身份不符合');
+							setTimeout(function() {
+								$('.zhe').css('display', 'none');
+							}, 1000)
+
+						} else if(data.flag == '2') {
+							$('.zhe').css('display', 'block').html('用户名不存在');
+							setTimeout(function() {
+								$('.zhe').css('display', 'none');
+							}, 1000)
+
+						} else {
+							$('.zhe').css('display', 'block').html('登录失败');
+							setTimeout(function() {
+								$('.zhe').css('display', 'none');
+							}, 1000)
+						}
+					},
+					error: function(data) {}
+				})
+			}
+		})
+
+=======
 
         $scope.state='';
+        
         $(".login").click(function() {
 			$.ajax({
 				url: "http://192.168.43.238:3560/login/denglu",
@@ -79,19 +127,31 @@ angular.module('xinxiApp')
 					jurisdiction:$scope.state
 				},
 				success: function(data) {
+					
 					if(data.flag == '1') {
 						alert('登陆成功')
+						console.log($scope.state)
+						if($scope.state==0){
+							location.href=''
+						}else if($scope.state==1){
+							location.href='views/yrkye.html'
+						}
 							//window.location.href = "login.html"
-					} else if(data.flag == '2') {
-						alert('登陆失败')
-					} else {
-						alert('登陆失败')
+					} else if(data.flag == '3') {
+						alert('用户名密码错误')
+					} else if(data.flag =='5'){
+						alert('身份不符合')
+					}else{
+						alert('登录失败')
 					}
                     console.log(data)
 				},
 				error: function(data) {}
 			})
 		})
+
+
+		
 
 
 
@@ -114,4 +174,6 @@ angular.module('xinxiApp')
 
 		
 
+
+>>>>>>> origin/master
 	}])
