@@ -22,5 +22,9 @@ angular
 				url: '/laoshi',
 				templateUrl: "views/yrkye.html"
 			})
+			.state('add', {
+				url: '/add',
+				templateUrl: "views/add.html"
+			})
 		$urlRouterProvider.otherwise("/login");
 	}])
