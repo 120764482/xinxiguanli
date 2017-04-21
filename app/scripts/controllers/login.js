@@ -87,7 +87,7 @@ angular.module('xinxiApp')
 						if($scope.state==0){
 							location.href=''
 						}else if($scope.state==1){
-							location.href=''
+							location.href='views/yrkye.html'
 						}
 							//window.location.href = "login.html"
 					} else if(data.flag == '3') {

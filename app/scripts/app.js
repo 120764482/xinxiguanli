@@ -18,9 +18,9 @@ angular
 				url: '/login',
 				templateUrl: "views/login.html"
 			})
-			.state('resgin', {
-				url: '/resgin',
-				templateUrl: "views/resgin.html"
+			.state('laoshi', {
+				url: '/laoshi',
+				templateUrl: "views/yrkye.html"
 			})
 		$urlRouterProvider.otherwise("/login");
 	}])
