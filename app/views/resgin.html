@@ -11,40 +11,39 @@
 			<ul class="ul">
 				<li class="clearfix li"><h3>注&nbsp;册</h3></li>
 				<li class="clearfix li">
-					<div class="fl student">
-						<p class="fl p"><span></span></p>
+					<div class="fl student" ng-click='btn()'>
+						<p class="fl p"><span ng-show="res"></span></p>
 						<b class="fl">学&nbsp;生</b>
 					</div>
-					<div class="fl the">
-						<p class="fl pp"><span></span></p>
+					<div class="fl the" ng-click='btnn()'>
+						<p class="fl pp"><span ng-show="ress"></span></p>
 						<b class="fl the">教&nbsp;师</b>
 					</div>
 				</li>
 				<li class="clearfix li">
 					<ul>
-						<li><input type="text" name="" id="" value="" placeholder="请输入用户名" /></li>
-						<li><input type="text" name="" id="" value="" placeholder="请输入密码"/></li>
-						<li><input type="text" name="" id="" value="" placeholder="请输入姓名"/></li>
-						<li><input type="text" name="" id="" value="" placeholder="请输入班级"/></li>
-						<li><input type="text" name="" id="" value="" placeholder="请输入QQ"/></li>
-						<li><input type="text" name="" id="" value="" placeholder="请输入邮箱"/></li>
+						<li><input type="text" class="name"  placeholder="请输入用户名" /></li>
+						<li><input type="text" class="psd" placeholder="请输入密码"/></li>
+						<li><input type="text" class="Name" placeholder="请输入姓名"/></li>
+						<li><input type="text" class="banji" placeholder="请输入班级"/></li>
+						<li><input type="text" class="email" placeholder="请输入邮箱"/></li>
 						<img src="../images/dui.png" class="dui"/>
-						<img src="../images/cuo.png" class="cuo"/>
+						<!--<img src="../images/cuo.png" class="cuo"/>-->
 						<img src="../images/dui.png" class="dui1"/>
-						<img src="../images/cuo.png" class="cuo1"/>
+						<!--<img src="../images/cuo.png" class="cuo1"/>-->
 						<img src="../images/dui.png" class="dui2"/>
-						<img src="../images/cuo.png" class="cuo2"/>
+						<!--<img src="../images/cuo.png" class="cuo2"/>-->
 						<img src="../images/dui.png" class="dui3"/>
-						<img src="../images/cuo.png" class="cuo3"/>
+						<!--<img src="../images/cuo.png" class="cuo3"/>-->
 						<img src="../images/dui.png" class="dui4"/>
-						<img src="../images/cuo.png" class="cuo4"/>
-						<img src="../images/dui.png" class="dui5"/>
-						<img src="../images/cuo.png" class="cuo5"/>
+						<!--<img src="../images/cuo.png" class="cuo4"/>-->
+						<!--<img src="../images/dui.png" class="dui5"/>-->
+						<!--<img src="../images/cuo.png" class="cuo5"/>-->
 					</ul>
 				</li>
 				<li class="clearfix li">
 					<div class="login" href="javascript:;">提交</div>
-					<p class="ppp">已有用户ID<a ui-sref="login">立即登陆</a></p>
+					<p class="ppp">已有用户ID?<a ui-sref="login">立即登陆</a></p>
 				</li>
 			</ul>
 		</div>
