@@ -32,6 +32,7 @@ angular.module('xinxiApp')
 
 		$scope.student = '0';
 		$scope.theach = '1';
+<<<<<<< HEAD
 		$scope.state = '';
 		$scope.validateCode = function() {
 			if($('#inputCode').val() <= 0) {
@@ -112,4 +113,67 @@ angular.module('xinxiApp')
 			}
 		})
 
+=======
+
+        $scope.state='';
+        
+        $(".login").click(function() {
+			$.ajax({
+				url: "http://192.168.43.238:3560/login/denglu",
+				type: "post",
+				data: {
+					password: $(".input2").val(),
+					account: $('.input1').val(),
+					jurisdiction:$scope.state
+				},
+				success: function(data) {
+					
+					if(data.flag == '1') {
+						alert('登陆成功')
+						console.log($scope.state)
+						if($scope.state==0){
+							location.href=''
+						}else if($scope.state==1){
+							location.href='views/yrkye.html'
+						}
+							//window.location.href = "login.html"
+					} else if(data.flag == '3') {
+						alert('用户名密码错误')
+					} else if(data.flag =='5'){
+						alert('身份不符合')
+					}else{
+						alert('登录失败')
+					}
+                    console.log(data)
+				},
+				error: function(data) {}
+			})
+		})
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+>>>>>>> origin/master
 	}])
