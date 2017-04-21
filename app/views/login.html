@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+
+	</head>
+
+	<body>
+		<div ng-controller="loginCtrl" class="box">
+			<div class="conDivv">
+				<div class="zhe">
+					{{con}}
+				</div>
+				<ul>
+					<li class="clearfix">
+						<h3>登&nbsp;陆</h3></li>
+					<li class="clearfix">
+						<div class="fl student" ng-click="btn()">
+							<p class="fl p">
+								<input type="radio" id="radio-1-1" ng-value="student" ng-model="state" name="radio-1-set" class="regular-radio" /><label for="radio-1-1"></label>
+							</p>
+						    <b class="fl" >学生</b>
+						</div>
+						<div class="fl the" ng-click="btnn()">
+							<p class="fl pp">
+								<input type="radio" id="radio-1-2" ng-value="theach" ng-model="state" name="radio-1-set" class="regular-radio" /><label for="radio-1-2"></label>
+							</p>
+							<b class="fl the">教师</b>
+						</div>
+					</li>
+					<li class="clearfix">
+						<input type="text" class="input1" placeholder="请输入用户名" /><br />
+						<input type="password" id="psd" class="input2" placeholder="请输入密码" />
+						<img src="../images/dui.png" class="dui" />
+						<img src="../images/cuo.png" class="cuo" />
+						<img src="../images/dui.png" class="dui1" />
+						<img src="../images/cuo.png" class="cuo1" />
+					</li>
+					<li class="clearfix">
+						<div class="div1 clearfix">
+							<span>验证码：</span>
+							<input type="text" id="inputCode" placeholder="请输入验证码" />
+						</div>
+						<div class="div2 clearfix">
+							<div class="code" id="checkCode"></div>
+							<a class="btn" href="javascript:;">看不清换一张</a>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="login" href="javascript:;">登陆</div>
+						<p class="ppp">还没有用户ID?
+							<a ui-sref="resgin">注册新用户</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
