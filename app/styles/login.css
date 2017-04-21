@@ -357,6 +357,7 @@ img {
 	position: absolute;
 	left: 50%;
 	margin-left: -90px;
+	cursor: pointer;
 }
 
 .conDivv ul li .ppp {

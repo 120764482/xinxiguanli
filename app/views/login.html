@@ -31,8 +31,8 @@
 						</div>
 					</li>
 					<li class="clearfix">
-						<input type="text" class="input1" placeholder="请输入用户名" /><br />
-						<input type="password" id="psd" class="input2" placeholder="请输入密码" />
+						<input type="text" class="input1" ng-model="loginuser" placeholder="请输入用户名" /><br />
+						<input type="password" id="psd" ng-model="loginpass" class="input2" placeholder="请输入密码" />
 						<img src="../images/dui.png" class="dui" />
 						<img src="../images/cuo.png" class="cuo" />
 						<img src="../images/dui.png" class="dui1" />
@@ -41,7 +41,7 @@
 					<li class="clearfix">
 						<div class="div1 clearfix">
 							<span>验证码：</span>
-							<input type="text" id="inputCode" placeholder="请输入验证码" />
+							<input type="text" ng-model="loginpic" id="inputCode" placeholder="请输入验证码" />
 						</div>
 						<div class="div2 clearfix">
 							<div class="code" id="checkCode"></div>
