@@ -3,39 +3,7 @@
  */
 angular.module('xinxiApp')
 	.controller('resginCtrl', ["$scope", "$http", "$location", function($scope, $http, $location) {
-		$scope.res = false;
-		$scope.btn = function() {
-			$scope.res = true;
-			$scope.ress = false;
-			$('.student .p').css('border', '1px solid #2ac454');
-			$('.student b').css('color', '#2ac454')
-			$('.the .pp').css('border', '1px solid #fff');
-			$('.the b').css('color', '#fff')
-		}
-		$scope.ress = false;
-		$scope.btnn = function() {
-			$scope.ress = true;
-			$scope.res = false;
-			$('.student .p').css('border', '1px solid #fff');
-			$('.student b').css('color', '#fff')
-			$('.the .pp').css('border', '1px solid #2ac454');
-			$('.the b').css('color', '#2ac454')
-		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
 		$(".login").click(function() {
 			$.ajax({
 				url: "http://192.168.43.238:3560/login/zhuce",
@@ -63,5 +31,9 @@ angular.module('xinxiApp')
 				error: function(data) {}
 			})
 		})
+		
+		$scope.student = '0';
+		$scope.theach = '1';
+		
 
 	}])
