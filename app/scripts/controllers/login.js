@@ -30,63 +30,87 @@ angular.module('xinxiApp')
 			}
 		}
 
-		$scope.student = '';
-		$scope.res = false;
-		$scope.btn = function() {
-			$scope.student = $('.student b').html()
-			$scope.res = true;
-			$scope.ress = false;
-			$('.student .p').css('border', '1px solid #2ac454');
-			$('.student b').css('color', '#2ac454')
-			$('.the .pp').css('border', '1px solid #fff');
-			$('.the b').css('color', '#fff');
-
-		}
-		$scope.theach = '';
-		$scope.ress = false;
-		$scope.btnn = function() {
-				$scope.theach = $('.the b').html();
-				$scope.ress = true;
-				$scope.res = false;
-				$('.student .p').css('border', '1px solid #fff');
-				$('.student b').css('color', '#fff')
-				$('.the .pp').css('border', '1px solid #2ac454');
-				$('.the b').css('color', '#2ac454')
-			}
+		
 			//用户名验证
-		var name = /^[a-zA-Z]\w{3,15}$/ig; //用户名验证
-		$(".input1").blur(function() {
-			if($(this).val().match(name)) {
-				$('.dui').css('display', 'block')
+//		var name = /^[a-zA-Z]\w{3,15}$/ig; //用户名验证
+//		$(".input1").blur(function() {
+//			if($(this).val().match(name)) {
+//				$('.dui').css('display', 'block')
+//
+//			} else if($(this).val() == null) {
+//				$('.dui').css('display', 'none')
+//				$('.conDivv .zhe').css('display', 'block').text('用户名不正确');
+//				setInterval(function() {
+//					$('.conDivv .zhe').css('display', 'none').text('用户名不正确');
+//				}, 2000)
+//
+//			} else {
+//				$('.dui').css('display', 'none')
+//				$('.conDivv .zhe').css('display', 'block').text('用户名不正确');
+//				setInterval(function() {
+//					$('.conDivv .zhe').css('display', 'none').text('用户名不正确');
+//				}, 2000)
+//			}
+//		})
+//
+//		var psd = /^[a-zA-Z]\w{5,17}$/; //密码验证
+//		$("#psd").blur(function() {
+//			if($(this).val().match(psd)) {
+//				$('.dui1').css('display', 'block')
+//			} else {
+//				$('.dui1').css('display', 'none')
+//				$('.conDivv .zhe').css('display', 'block').text('密码不正确');
+//				setInterval(function() {
+//					$('.conDivv .zhe').css('display', 'none').text('密码不正确');
+//				}, 2000)
+//			}
+//		})
+        $scope.student = '0';
+		$scope.theach = '1';
 
-			} else if($(this).val() == null) {
-				$('.dui').css('display', 'none')
-				$('.conDivv .zhe').css('display', 'block').text('用户名不正确');
-				setInterval(function() {
-					$('.conDivv .zhe').css('display', 'none').text('用户名不正确');
-				}, 2000)
-
-			} else {
-				$('.dui').css('display', 'none')
-				$('.conDivv .zhe').css('display', 'block').text('用户名不正确');
-				setInterval(function() {
-					$('.conDivv .zhe').css('display', 'none').text('用户名不正确');
-				}, 2000)
-			}
+        $scope.state='';
+        $(".login").click(function() {
+			$.ajax({
+				url: "http://192.168.43.238:3560/login/denglu",
+				type: "post",
+				data: {
+					password: $(".input2").val(),
+					account: $('.input1').val(),
+					jurisdiction:$scope.state
+				},
+				success: function(data) {
+					if(data.flag == '1') {
+						alert('登陆成功')
+							//window.location.href = "login.html"
+					} else if(data.flag == '2') {
+						alert('登陆失败')
+					} else {
+						alert('登陆失败')
+					}
+                    console.log(data)
+				},
+				error: function(data) {}
+			})
 		})
 
-		var psd = /^[a-zA-Z]\w{5,17}$/; //密码验证
-		$("#psd").blur(function() {
-			if($(this).val().match(psd)) {
-				$('.dui1').css('display', 'block')
-			} else {
-				$('.dui1').css('display', 'none')
-				$('.conDivv .zhe').css('display', 'block').text('密码不正确');
-				setInterval(function() {
-					$('.conDivv .zhe').css('display', 'none').text('密码不正确');
-				}, 2000)
-			}
-		})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		
 
