@@ -37,10 +37,47 @@ angular.module('xinxiApp')
 			alert('失败')
 		})
 		
-		//
-		
-		
-		
-		
+		//查找
+//		$('#first').click(function(){
+//			$.ajax({
+//				type:"get",
+//				url:"http://192.168.43.238:3560/list/list",
+//				async:true,
+//				success:function(data){
+//					
+//				},
+//				error:function(){
+//					alert('链接失败！');
+//				}
+//			});
+//		})
+//		
+//		
+//		
+//		//删除
+//			$('body').delegate('.del','click',function(){
+//				var id = $(this).attr('Uid');   //获取id
+////				alert(id)
+//				$.ajax({
+//					type:"get",
+//					url:"http://localhost:8005/login/del?id="+Uid,
+//					async:true,
+//					success:function(data){
+//						if(data.flag==1){
+//							alert('删除成功');
+//							$(this).parent().remove();
+//							window.location.reload();
+//						}else{
+//							alert('删除失败')
+//						}
+//					},
+//					errror:function(){
+//						alert('链接失败！')
+//					}
+//				});
+//				
+//			})
+			
+			
         
 	}])
