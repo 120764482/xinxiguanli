@@ -2,7 +2,7 @@
  * New node file
  */
 angular.module('xinxiApp')
-	.controller('loginCtrl', ["$scope", "$http", "$location", function($scope, $http, $location) {
+	.controller('loginCtrl', ["$scope", "$http", "$location","$state", function($scope, $http, $location,$state) {
 
 		createCode();
 
@@ -82,7 +82,8 @@ angular.module('xinxiApp')
 							if($scope.state == 0) {
 								//location.href = ''
 							} else if($scope.state == 1) {
-								location.href = 'views/yrkye.html'
+								
+								$state.go("laoshi")
 							}
 						} else if(data.flag == '3') {
 							$('.zhe').css('display', 'block').html('密码错误');

@@ -3,12 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../styles/yrkye.css"/>
-		<script src="../scripts/controllers/yrkye.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../scripts/controllers/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		
 	</head>
 	<body>
-		<div class="yrkbox">
+		<div ng-controller="jiaoshiCtrl" class="yrkbox">
 			<div class="yrkbox_conter">
 				<div class="yrk_small_nav">
 					<div class="yrk_small_nav_left">
@@ -68,7 +66,7 @@
 									<td></td>
 									<td></td>
 									<td>
-										<button class="add">添加</button>
+										<button class="add" ui-sref="add">添加</button>
 										<button>修改</button>
 										<button>详情</button>
 										<button>删除</button>
