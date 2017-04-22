@@ -1,0 +1,137 @@
+html,
+body,
+div,
+span,
+p,
+h1,
+h2,
+h3,
+b,
+i,
+a,
+em,
+input,
+form,
+img,
+ul,
+li,
+dl,
+dt {  
+    margin: 0;
+    padding: 0;
+    border: 0; 
+    outline: none;
+    font-style: normal;
+    box-sizing: border-box;  
+}
+ul,
+li,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: inline-block;
+}
+.div{
+	width: 100vw;
+	height: 100vh;
+	background:url(../images/bj.jpg) no-repeat;
+	background-size: cover;
+}
+.m_header{
+	width: 100vw;
+	height: 80px;
+	padding-top: 20px;
+	/*background: #ccc;*/
+	/*opacity: .2;*/
+}
+.m_logo{
+	width: 33%;
+	height: 80px;
+	font-size: 28px;
+	color:red;
+	padding-left: 50px;
+    line-height: 80px;
+	float: left;
+}
+.m_sousuo{
+	width: 33%;
+	height: 80px;
+	padding-left: 20px;
+	float: left;
+	/*background: #ccc;*/
+}
+.m_sousuo input{
+	width: 300px;
+	height: 30px;
+	text-indent: 10px;
+	font-size: 14px;
+	line-height: 30px;
+	margin-top: 25px;
+	outline: none;
+}
+.m_sousuo button{
+	width: 80px;
+	height: 32px;
+	margin-top: 24px;
+}
+.m_nav{
+	width: 33%;
+	height: 80px;
+	float: right;
+	/*background: #ccc;*/
+}
+/*导航开始*/
+.m_nav ul{
+	width: 80%;
+	height: 80px;
+	margin-left: 80px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.m_nav ul li{
+    margin-left: 14px;
+	line-height: 80px;
+	font-size: 16px;
+	color: #07bc3b;
+	text-align: center;
+	float: left;
+}
+.m_nav ul li a{
+	color: #07bc3b;
+}
+/*导航结束**************/
+/*主体开始*/
+.m_section{
+	width:80%;
+	height: 400px;
+	background: linear-gradient(to bottom,#20272d,#1a3f38);
+	border: 1px solid #394144;
+	position: absolute;
+	top:15%;
+	left: 0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(2,13,15,.5),
+	            -2px -2px 5px rgba(2,13,15,.5);
+	overflow: hidden;
+
+}
+#main{
+ 	margin-top: 30px;
+   /* margin-left: 20px;*/
+ }
+#main tr td{
+	width: 110px;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+/*主体结束*/
