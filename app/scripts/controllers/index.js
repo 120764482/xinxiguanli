@@ -18,7 +18,8 @@ angular.module('xinxiApp')
 			 // 	data:{
 			 // 		userId:id,
 		 	// },			
-			 	success: function(e) {					
+			 	success: function(e) {	
+			 	   console.log(e);				
 			       var html='';
 			     for(var i=0;i<e.length;i++){      		    
          //     html+='<tr><td><input value="'+e[i].name+'"></input></td><td><input value="'+e[i].classnames+'"></input></td>
