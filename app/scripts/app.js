@@ -22,6 +22,14 @@ angular
 				url: '/laoshi',
 				templateUrl: "views/yrkye.html"
 			})
+			.state('xuesheng', {
+				url: '/xuesheng',
+				templateUrl: "views/shouye.html"
+			})
+			.state('guize', {
+				url: '/guize',
+				templateUrl: "views/guize.html"
+			})
 			.state('add', {
 				url: '/add',
 				templateUrl: "views/add.html"
