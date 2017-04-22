@@ -34,5 +34,13 @@ angular
 				url: '/add',
 				templateUrl: "views/add.html"
 			})
+			.state('shouye', {
+				url: '/shouye',
+				templateUrl: "views/shouye.html"
+			})
+			.state('guize', {
+				url: '/guize',
+				templateUrl: "views/guize.html"
+			})
 		$urlRouterProvider.otherwise("/login");
 	}])
