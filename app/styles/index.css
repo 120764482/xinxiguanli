@@ -126,7 +126,13 @@ img {
  	margin-top: 30px;
    /* margin-left: 20px;*/
  }
-#main tr td{
+/* #main table{
+ 	width:80%; 
+ }
+ #main tbody{
+ 	width:80%; 
+ }*/
+#main tbody tr td{
 	width: 110px;
 	color: #fff;
 	text-align: center;
@@ -134,4 +140,5 @@ img {
 	margin-right: 10px;
 	margin-left: 10px;
 }
+
 /*主体结束*/

@@ -75,10 +75,10 @@ angular.module('xinxiApp')
 					},
 					success: function(data) {
 						if(data.flag == '1') {
-							$('.zhe').css('display', 'block').html('登陆成功');
-							setTimeout(function() {
-								$('.zhe').css('display', 'none');
-							}, 1000);
+//							$('.zhe').css('display', 'block').html('登陆成功');
+//							setTimeout(function() {
+//								$('.zhe').css('display', 'none');
+//							}, 1000);
 							if($scope.state == 0) {
 								$state.go("xuesheng")
 							} else if($scope.state == 1) {
