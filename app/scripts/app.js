@@ -26,8 +26,8 @@ angular
 				url: '/add',
 				templateUrl: "views/add.html"
 			})
-			.state('shouye', {
-				url: '/shouye',
+			.state('xuesheng', {
+				url: '/xuesheng',
 				templateUrl: "views/shouye.html"
 			})
 			.state('guize', {
