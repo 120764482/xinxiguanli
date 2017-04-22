@@ -80,7 +80,7 @@ angular.module('xinxiApp')
 								$('.zhe').css('display', 'none');
 							}, 1000);
 							if($scope.state == 0) {
-								$state.go("shouye")
+								$state.go("xuesheng")
 							} else if($scope.state == 1) {
 								
 								$state.go("laoshi")
