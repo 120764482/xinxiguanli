@@ -61,19 +61,17 @@
 									<th>手机号</th>
 									<th style="width: 200px;">编辑</th>
 								</tr>
-								<tbody></tbody>
-								<!--<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+								<tr ng-repeat = 'item in ary'>
+									<td>{{item.name}}</td>
+									<td>{{item.classnames}}</td>
+									<td>{{item.sex}}</td>
+									<td>{{item.cellphone}}</td>
 									<td>
 										<button>修改</button>
 										<button>详情</button>
 										<button>删除</button>
-										
 									</td>
-								</tr>-->
+								</tr>
 							</table>
 						</div>
 					</div>
