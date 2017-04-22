@@ -1,10 +1,62 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
-</html>
+<div class="add_box" ng-controller="addCtrl">
+	<div class="zhe"></div>
+	<h2>当前位置：添加信息</h2>
+	<div class="add_con clearfix">
+		<div class="add_con_add fl">
+			<div class="add_img">
+				<div class="img_add"><img src="../images/cuo.png"/></div>
+				<p>点击头像上传</p>
+			</div>
+			<div class="add_one fl">
+				<ul class="add_name clearfix">
+					<li><p class="xin"><b>*</b>姓名：</p></li>
+					<li><p class="xin"><b>*</b>班级：</p></li>
+					<li><p class="xin"><b>*</b>地址：</p></li>
+					<li><p class="xin"><b>*</b>家长姓名：</p></li>
+					<li><p class="xin"><b>*</b>班主任：</p></li>
+					<li><p class="xin"><b>*</b>宿舍号：</p></li>
+				</ul>
+			</div>
+			<div class="add_two fl">
+				<ul class="add_input clearfix">
+					<li class="clearfix"><input class="input username" type="text"  /></li>
+					<li class="clearfix"><input class="input class" type="text"  /></li>
+					<li class="clearfix"><input class="input address" type="text"  /></li>
+					<li class="clearfix"><input class="input jiazhangName" type="text"  /></li>
+					<li class="clearfix"><input class="input theath" type="text"  /></li>
+					<li class="clearfix"><input class="input sushe" type="text"  /></li>
+				</ul>
+			</div>
+			<div class="add_three fl">
+				<ul class="add_name clearfix">
+					<li><p class="xin"><b>*</b>姓别：</p></li>
+					<li><p class="xin"><b>*</b>手机号：</p></li>
+					<li><p class="xin"><b>*</b>学号：</p></li>
+					<li><p class="xin"><b>*</b>家长电话：</p></li>
+					<li><p class="xin"><b>*</b>专业课老师：</p></li>
+					<li><p class="xin"><b>*</b>综合积分：</p></li>
+				</ul>
+			</div>
+			<div class="add_four fl">
+				<ul class="add_input clearfix">
+					<li class="clearfix">
+						<div class="fl div1">
+							<input type="radio" class="input1 fl" ng-value="nan" ng-model="state"  />
+							<span class="fl">男</span>
+						</div>
+						<div class="fl div2">
+							<input type="radio" class="input1 fl" ng-value="nv" ng-model="state"  />
+							<span class="fl">女</span>
+						</div>
+					</li>
+					<li class="clearfix"><input class="input phone" type="text"  /></li>
+					<li class="clearfix"><input class="input id" type="text"  /></li>
+					<li class="clearfix"><input class="input jiazhangPhone" type="text"  /></li>
+					<li class="clearfix"><input class="input zhuanye" type="text"  /></li>
+					<li class="clearfix"><input class="input jifen" type="text"  /></li>
+				</ul>
+			</div>
+		</div>
+	    <div class="btn"><a href="javascript:;" class="button">提交</a></div>
+	</div>
+</div>

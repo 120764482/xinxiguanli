@@ -128,7 +128,12 @@ img {
 	-webkit-animation: load2 2s infinite ease;
 	animation: load2 2s infinite ease;
 }
-
+body{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
 .box {
 	width: 100vw;
 	height: 100vh;
