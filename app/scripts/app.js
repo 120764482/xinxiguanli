@@ -39,8 +39,12 @@ angular
 				templateUrl: "views/sousuo.html"
 			})
 			.state('xiang', {
-				url: '/xiang',
+				url: '/xiang{id}',
 				templateUrl: "views/gerenxin.html"
+			})
+			.state('xiugai', {
+				url: '/xiugai{id}',
+				templateUrl: "views/xiugai.html"
 			})
 		$urlRouterProvider.otherwise("/login");
 	}])
