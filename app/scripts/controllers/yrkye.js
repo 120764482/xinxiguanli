@@ -24,24 +24,6 @@ angular.module('xinxiApp')
 
 		//列表
 		$scope.ary = [];
-		//		$.ajax({
-		//			type: "get",
-		//			url: "http://192.168.43.238:3560/list/list",
-		//			async: true,
-		//			success: function(data) {
-		//				//console.log(data)
-		//				
-		//				    arr = reqs.data;
-		//					for(var i = 0; i < arr.length; i++) {
-		//						$scope.ary.push(arr[i])
-		//					}
-		//              
-		//
-		//			},
-		//			error: function() {
-		//				alert('链接失败')
-		//			}
-		//		});
 		$http({
 			url: "http://192.168.43.238:3560/list/list",
 			method:"get"
@@ -54,5 +36,11 @@ angular.module('xinxiApp')
 		}, function(reqs) {
 			alert('失败')
 		})
+		
+		//
+		
+		
+		
+		
         
 	}])

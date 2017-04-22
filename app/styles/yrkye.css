@@ -330,12 +330,16 @@ img {
 	width: 98%;
 	height: 404px;
 	margin: 1px auto;
-	-overflow: hidden;
+	overflow: hidden;
 	border: 1px dashed #fff;
 	color: #fff;
 }
 .yrkbox_bottom_right_f table th{
 	height: 40px;
+	text-align: center;
+}
+.yrkbox_bottom_right_f table td{
+	height: 30px;
 	text-align: center;
 }
 .yrkbox_bottom_right_f table td button{
