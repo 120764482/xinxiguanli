@@ -63,6 +63,11 @@ angular.module('xinxiApp')
 				setTimeout(function() {
 					$('.zhe').css('display', 'none');
 				}, 1000)
+			}else if($scope.state == '') {
+				$('.zhe').css('display', 'block').html('请选择身份');
+				setTimeout(function() {
+					$('.zhe').css('display', 'none');
+				}, 1000)
 			} else if($scope.validateCode()) {
 				localStorage.user = $('.input1').val();
 				$.ajax({

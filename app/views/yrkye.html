@@ -6,81 +6,10 @@
 	</head>
 	<body>
 		<div ng-controller="jiaoshiCtrl" class="yrkbox">
-			<!--<div class="yrkbox_conter">
-				<div class="yrk_small_nav">
-					<div class="yrk_small_nav_left">
-						<p class="p1">欢迎<a href="#" id="Controller">456</a>登录</p>
-						<img src="../images/1.gif"/>
-					</div>
-					
-					<nav class="nav">
-						<ul>
-							<div class="left">
-								<input type="file" id="file"/>
-								<div class="box">
-									<div class="image"><img src="../images/sara__4.jpg"/></div>
-								</div>
-							</div>
-							<span style="width: 150px;">管理者：<a href="#" id="Controller">456</a></span>
-							<span style="border-right:none;float: right;"><a ui-sref="login">退出登录</a></span>
-						</ul>
-					</nav>
-				</div>
-				yrk_small_nav结束
-			</div>-->
-			<!--yrkbox_conter结束-->
-			
-				<!--<div class="yrk_small">
-					<div class="yrk_small_left">
-						<ul>
-							<div>
-								<p>个人管理</p>
-								<img src="../images/setup.png"/>
-							</div>
-							<li><a href="#">班级</a></li>
-							<li><input type="radio" name="class" id="first" />1604A</li>
-							<li><input type="radio" name="class" id="second" />1604B</li>
-						</ul>
-					</div>
-					<div class="yrk_small_right">
-						<div class="yrk_small_right_xue">
-							<p>学生信息</p>
-						</div>
-						<div class="yrk_small_right_bottom">
-							<div class="yrk_small_right_top">
-								<input type="text" name="" id="" placeholder="请输入要搜索的内容" />
-								<button class="ss">搜索</button>
-								<button class="add" ui-sref="add()">添加信息</button>
-							</div>
-							<table border="" cellspacing="" cellpadding="">
-								<tr>
-									<th>姓名 </th>
-									<th>班级</th>
-									<th>性别</th>
-									<th>手机号</th>
-									<th style="width: 240px;">编辑</th>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>
-										<button>修改</button>
-										<button>详情</button>
-										<button>删除</button>
-										
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>-->
-				<!--yrk_small结束-->
 				<div class="yrkbox_top">
 					<div class="yrkbox_nav">
 						<div class="yrkbox_nav_left">
-							<p class="p1">欢迎<a href="#" id="Controller">456</a>登录</p>
+							<p class="p1">欢迎<a href="#" id="Controller">456</a>登录，最新版本</p>
 							<img src="../images/1.gif"/>
 						</div>
 						<div class="yrkbox_nav_right">
@@ -124,45 +53,32 @@
 							<button class="add" ui-sref="add()">添加信息</button>
 						</div>
 						<div class="yrkbox_bottom_right_f">
-							
+							<table border="1" cellspacing="1" cellpadding="2">
+								<tr>
+									<th>姓名 </th>
+									<th>班级</th>
+									<th>性别</th>
+									<th>手机号</th>
+									<th style="width: 200px;">编辑</th>
+								</tr>
+								<tbody></tbody>
+								<!--<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>
+										<button>修改</button>
+										<button>详情</button>
+										<button>删除</button>
+										
+									</td>
+								</tr>-->
+							</table>
 						</div>
 					</div>
 				</div>
 		</div>
 		
 	</body>
-	<script type="text/javascript">
-			$(function(){
-				
-				$(".image").click(function(){
-				$("#file").click();
-				$("#file").change(function(){
-					var files = this.files[0],//加载处理图片
-						fileObj = new FileReader();
-					fileObj.readAsDataURL(files);
-					fileObj.onload = function() {
-						$(".image").innerHTML = "<img src ='" + this.result + "'/>";
-					}
-				})
-			})
-					
-			//列表
-//			$.ajax({
-//				type:"get",
-//				url:"http://localhost:3560/list/list",
-//				async:true,
-//				success:function(data){
-//					
-//					
-//				},
-//				error:function(){
-//					alert('链接失败')
-//				}
-//			});
-			
-					
-			})
-		
-		
-		</script>
 </html>
