@@ -1,5 +1,5 @@
 angular.module('xinxiApp')
-	.controller('jiaoshiCtrl', ["$scope", "$http", "$location", function($scope, $http, $location) {
+	.controller('jiaoshiCtrl', ["$scope","$state", "$http", "$location", function($scope,$state, $http, $location) {
 
 		//上传图片
 		$(".image").click(function() {
@@ -35,7 +35,7 @@ angular.module('xinxiApp')
 			url: "http://192.168.43.238:3560/list/list",
 			method:"get"
 		}).then(function(reqs) {
-			console.log(reqs)
+			//console.log(reqs)
 			arr = reqs.data;
 			for(var i = 0; i < arr.length; i++) {
 				$scope.ary.push(arr[i]);
@@ -45,9 +45,9 @@ angular.module('xinxiApp')
 		})
 		
 		//详情
-		$('body').delegate('.xiang','click',function(){
-			$location.href='xiang?id='+$(this).attr('id')
-		})
+//		$('body').delegate('.xiang','click',function(){
+//			$location.href='xiang?id='+$(this).attr('id')
+//		})
 		
 		//搜索
 //			$('.ss').click(function(){
