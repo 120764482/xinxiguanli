@@ -34,9 +34,15 @@ angular
 				url: '/add',
 				templateUrl: "views/add.html"
 			})
+<<<<<<< HEAD
 			.state('sousuo', {
 				url: '/sousou',
 				templateUrl: "views/sousuo.html"
+=======
+			.state('xiang', {
+				url: '/xiang',
+				templateUrl: "views/gerenxin.html"
+>>>>>>> origin/master
 			})
 		$urlRouterProvider.otherwise("/login");
 	}])
