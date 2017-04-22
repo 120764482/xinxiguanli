@@ -1,7 +1,7 @@
 angular.module('xinxiApp')
 	.controller('xiangCtrl', ["$scope", "$http", "$location", "$state", "$stateParams", function($scope, $http, $location,$routeParams, $stateParams, $state) {
-		//var id = window.location.href.split('g')[1];
-		var id = $routeParams.id;
+		var id = window.location.href.split('=')[1];
+		//var id = $routeParams.id;
 		console.log(id)
 //		$.ajax({
 //			url: "http://192.168.43.238:3560/geren/xinxi?Uid="+id,
