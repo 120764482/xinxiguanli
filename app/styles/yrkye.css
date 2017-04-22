@@ -338,6 +338,10 @@ img {
 	height: 40px;
 	text-align: center;
 }
+.yrkbox_bottom_right_f table td{
+	height: 30px;
+	text-align: center;
+}
 .yrkbox_bottom_right_f table td button{
 	width: 54px;
 	height: 30px;
