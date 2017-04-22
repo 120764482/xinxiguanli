@@ -6,18 +6,12 @@ angular.module('xinxiApp')
           	 $.ajax({
 			 	type: "get",
 			 	// 拼字符串：?userId+id  
-<<<<<<< HEAD
 			 	url: "http://localhost:3560/list/list",	
 			 // 	data:{
 			 // 		userId:id,
-		 	// },			
+		 	// },		
 			 	success: function(e) {	
-			 	   console.log(e);				
-=======
-			 	url:"http://192.168.43.238:3560/list/list",		
-			 	success: function(e) {	
-			 		console.log(e)
->>>>>>> origin/master
+			 		// console.log(e);
 			       var html='';
 			     for(var i=0;i<e.length;i++){      		    
          //     html+='<tr><td><input value="'+e[i].name+'"></input></td><td><input value="'+e[i].classnames+'"></input></td>
