@@ -40,7 +40,7 @@ angular
 			})
 			.state('xiang', {
 				url: '/xiang{id}',
-				templateUrl: "views/gerenxin.html"
+				templateUrl: "views/xiangqing.html"
 			})
 			.state('xiugai', {
 				url: '/xiugai{id}',
