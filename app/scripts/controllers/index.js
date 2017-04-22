@@ -1,12 +1,4 @@
-'use strict';
 
-/**
- * @ngdoc function
- * @name xinxiApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the xinxiApp
- */
 angular.module('xinxiApp')
 	.controller('shouyeCtrl', ["$scope", "$http", "$location","$state", function($scope, $http, $location,$state) {
   //列表展示
@@ -14,11 +6,9 @@ angular.module('xinxiApp')
           	 $.ajax({
 			 	type: "get",
 			 	// 拼字符串：?userId+id  
-			 	url: "http://localhost:3560/list/list",	
-			 // 	data:{
-			 // 		userId:id,
-		 	// },			
-			 	success: function(e) {					
+			 	url:"http://192.168.43.238:3560/list/list",		
+			 	success: function(e) {	
+			 		console.log(e)
 			       var html='';
 			     for(var i=0;i<e.length;i++){      		    
          //     html+='<tr><td><input value="'+e[i].name+'"></input></td><td><input value="'+e[i].classnames+'"></input></td>
