@@ -22,41 +22,20 @@ angular.module('xinxiApp')
 			 	error: function() {
 			 		alert("失败")
 			 	}
-			 })      
-   //   //搜索 
-   // $('#sousuo').click(function() {
-   //        	   var  str=$('.sousuo').val()
-   //        		$.ajax({
-			// 		type:"get",
-			// 		url:"http://localhost:8005/sousuo/sousuo",
-			// 		data:{
-			// 			'val':str
-			// 		},				
-			// 		success:function(e){
-			// 		console.log(e);
-			// 		location.href="sousuo.html"
-				
-			// 	},
-			// 		error:function(){
-			// 			alert('失敗')
-					 
-			// 		}
-			// 	});
-   //        })
+			 })   
 
 //详情
             $('.btn').click(function() {
-          	   var  str=$('.sousuo').val()
+          	   // var  str=$('.sousuo').val()
           		$.ajax({
 					type:"get",
-					url:"http://localhost:8005/sousuo/sousuo",
-					data:{
-						'val':str
-					},				
+				url: "http://192.168.43.238:3560/list/list?id="+id,	
+					// data:{
+					// 	'val':str
+					// },				
 					success:function(e){
-					console.log(e);
-					location.href="sousuo.html"
-				
+					// console.log(e)
+					$state.go("xiang")
 				},
 					error:function(){
 						alert('失敗')

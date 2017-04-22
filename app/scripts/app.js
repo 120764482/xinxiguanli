@@ -34,6 +34,9 @@ angular
 				url: '/add',
 				templateUrl: "views/add.html"
 			})
-			
+			.state('sousuo', {
+				url: '/sousou',
+				templateUrl: "views/sousuo.html"
+			})
 		$urlRouterProvider.otherwise("/login");
 	}])
