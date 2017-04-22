@@ -8,6 +8,9 @@
  * Controller of the xinxiApp
  */
 angular.module('xinxiApp')
-  .controller('guizeCtrl', function () {
+  .controller('guizeCtrl',["$state"], function ($state) {
+  	$('.btn').click(function () {
+  		$state.go("guize");
+  	})
     
   });
