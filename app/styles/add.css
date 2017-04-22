@@ -128,25 +128,200 @@ img {
 	-webkit-animation: load2 2s infinite ease;
 	animation: load2 2s infinite ease;
 }
-
-.box {
+body{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.add_box {
 	width: 100vw;
 	height: 100vh;
 	background: url(../images/bj.jpg) no-repeat;
 	background-size: cover;
+	overflow: hidden;
+	position: relative;
 }
-
-.conDivv {
-	width: 350px;
-	height: 400px;
+.add_box .zhe{
+	display: none;
+	width: 200px;
+	height: 100px;
+	border-radius: 10px;
+	background: #ccc;
+	text-align: center;
+	line-height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: -50px;
+	z-index: 999999;
+}
+.add_box h2{
+	color: #fff;
+	font-weight:bold;
+	margin-top: 50px;
+	margin-left: 220px;
+	z-index: 999999999;
+}
+.add_con {
+	width: 1000px;
+	height: 600px;
 	background: linear-gradient(to bottom, #20272d, #1a3f38);
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-left: -175px;
-	margin-top: -200px;
+	margin-left: -500px;
+	margin-top: -300px;
 	border: 1px solid #394144;
 	border-radius: 10px;
 	box-shadow: 2px 2px 5px rgba(2, 13, 15, .5), -2px -2px 5px rgba(2, 13, 15, .5);
 	overflow: hidden;
 }
+.add_con .btn{
+	width: 1000px;
+	height: 50px;
+	position: relative;
+}
+.add_con .btn a{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: -20px;
+	display: block;
+	border-radius: 5px;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	font-size: 14px;
+	background: #07bc3b;
+}
+.add_con_add{
+	width: 1000px;
+	height: 500px;
+	position: relative;
+}
+.add_con_add .add_one{
+	width: 120px;
+	height: 500px;
+	overflow: hidden;
+}
+.add_con_add .add_two{
+	width: 300px;
+	overflow: hidden;
+	height: 500px;
+}
+.add_con_add .add_three{
+	width: 120px;
+	height: 500px;
+	overflow: hidden;
+}
+.add_con_add .add_four{
+	width: 300px;
+	height: 500px;
+	overflow: hidden;
+}
+.add_con_add ul.add_name li{
+	margin-top: 30px;
+	line-height: 55px;
+}
+.add_con_add .add_name li .xin{
+	padding-right: 5px;
+	font-size: 16px;
+	color: #fff;
+	float: right;
+}
+.add_con_add .add_name li .xin b {
+	padding: 0 5px;
+	color: #cf5c5c;
+}
+.add_con_add .add_input{
+	margin-top: 32px;
+}
+.add_con_add .add_input li {
+	line-height: 55px;
+}
+.add_con_add .add_input li .input{
+	text-indent: 5px;
+	width: 224px;
+	height: 36px;
+	border-radius: 5px;
+	border: 2px solid #587d6b;
+	background: none;
+	color: #fff;
+	margin-left: 35px;
+}
+.add_con_add .add_input li .div1{
+	margin-left: 32px;
+	overflow: hidden;
+}
+.add_con_add .add_input li .div1 .input1{
+	width: 14px;
+	height: 14px;
+	margin-top: 20px;
+}
+.add_con_add .add_input li .div1 span{
+	display: block;
+	margin-top: 0px;
+	color: #fff;
+	margin-left: 10px;
+}
+.add_con_add .add_input li .div2{
+	margin-left: 12px;
+	overflow: hidden;
+}
+.add_con_add .add_input li .div2 .input1{
+	width: 14px;
+	height: 14px;
+	margin-top: 20px;
+}
+.add_con_add .add_input li .div2 span{
+	display: block;
+	margin-top: 0px;
+	color: #fff;
+	margin-left: 10px;
+}
+.add_con_add .add_img{
+	width: 200px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.add_con_add .add_img .img_add{
+	width: 100px;
+	height: 100px;
+	border: 1px solid  #fff;
+	border-radius: 50%;
+   margin-left: 50px;
+   margin-top: 130px;
+   overflow: hidden;
+}
+.add_con_add .add_img .img_add img{
+	width: 100%;
+	height: 100%;
+}
+.add_con_add .add_img p{
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
