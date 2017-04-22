@@ -7,7 +7,7 @@ angular.module('xinxiApp')
 			url: "http://192.168.43.238:3560/geren/xinxi?Uid="+id,
 			type: "get",
 			success: function(reqs) {
-				//console.log(reqs)
+				console.log(reqs)
 				$('.username').val(reqs[0].name);
 				$('.theath').val(reqs[0].teachername);
 				$('.class').val(reqs[0].name);
@@ -20,6 +20,10 @@ angular.module('xinxiApp')
 				$('.jifen').val(reqs[0].number);
 				$('.zhuanye').val(reqs[0].teacherlaoshi);
 				$('.sex').val(reqs[0].sex);
+				$('.zhoukao').val(reqs[0].zhoukao);
+				$('.weijiyuanyin').val(reqs[0].weiji);
+				$('.yuekao').val(reqs[0].yuekao);
+				$('.weijikofen').val(reqs[0].weijifen);
 			},
 			error: function(data) {}
 		})
