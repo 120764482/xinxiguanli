@@ -50,27 +50,27 @@
       </div>
 <!-- 主体部分结束 -->
 </div>
-<script type="text/javascript">
-			 $.ajax({
-			 	type: "get",
-			 	// 拼字符串：?userId+id  
-			 	url: "http://localhost:8005/look/list",	
-				// data:{
-				// 		'val':str
-				// 	},				
-			 	success: function(e) {					
-			       var html='';
-			  for(var i=0;i<e.length;i++){
-      		       	 html+="<tr height='35px' click='btn' id='"+e[i].id+"'><td color:'#fff'>"+e[i].name+"</td><td color:'#fff'>"+e[i].classnames+"</td><td color:'#fff'>"+e[i].sex+"</td><td color:'#fff'>"+e[i].cellphone+"</td><td color:'#fff'>"+e[i].teachlaoshi+"</td><td color:'#fff'>"+e[i].patriarchname+"</td><td color:'#fff'>"+e[i].patriarccellphone+"</td><td color:'#fff'>"+e[i].dorm+"</td><td color:'#fff'>"+e[i].number+"</td></tr>"
+// <script type="text/javascript">
+// 			 $.ajax({
+// 			 	type: "get",
+// 			 	// 拼字符串：?userId+id  
+// 			 	url: "http://localhost:8005/look/list",	
+// 				// data:{
+// 				// 		'val':str
+// 				// 	},				
+// 			 	success: function(e) {					
+// 			       var html='';
+// 			  for(var i=0;i<e.length;i++){
+//       		       	 html+="<tr height='35px' click='btn' id='"+e[i].id+"'><td color:'#fff'>"+e[i].name+"</td><td color:'#fff'>"+e[i].classnames+"</td><td color:'#fff'>"+e[i].sex+"</td><td color:'#fff'>"+e[i].cellphone+"</td><td color:'#fff'>"+e[i].teachlaoshi+"</td><td color:'#fff'>"+e[i].patriarchname+"</td><td color:'#fff'>"+e[i].patriarccellphone+"</td><td color:'#fff'>"+e[i].dorm+"</td><td color:'#fff'>"+e[i].number+"</td></tr>"
 
-						}
-					$("#m_section").append(html);
-			 	},
-			 	error: function() {
-			 		alert("失败")
-			 	}
-			 })
-</script>
+// 						}
+// 					$("#m_section").append(html);
+// 			 	},
+// 			 	error: function() {
+// 			 		alert("失败")
+// 			 	}
+// 			 })
+// </script>
 </body>
 </html>
 
