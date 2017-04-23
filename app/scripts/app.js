@@ -39,11 +39,11 @@ angular
 				templateUrl: "views/sousuo.html"
 			})
 			.state('xiang', {
-				url: '/xiang',
+				url: '/xiang{id}',
 				templateUrl: "views/xiangqing.html"
 			})
 			.state('xiugai', {
-				url: '/xiugai',
+				url: '/xiugai{id}',
 				templateUrl: "views/xiugai.html"
 			})
 		$urlRouterProvider.otherwise("/login");
