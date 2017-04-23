@@ -10,7 +10,7 @@ angular.module('xinxiApp')
 				//console.log(reqs)
 				$('.username').val(reqs[0].name);
 				$('.theath').val(reqs[0].teachername);
-				$('.class').val(reqs[0].name);
+				$('.class').val(reqs[0].classnames);
 				$('.phone').val(reqs[0].cellphone);
 				$('.address').val(reqs[0].address);
 				$('.jiazhangName').val(reqs[0].patriarchname);

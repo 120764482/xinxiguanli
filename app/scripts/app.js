@@ -34,10 +34,6 @@ angular
 				url: '/add',
 				templateUrl: "views/add.html"
 			})
-			.state('sousuo', {
-				url: '/sousou',
-				templateUrl: "views/sousuo.html"
-			})
 			.state('xiang', {
 				url: '/xiang{id}',
 				templateUrl: "views/xiangqing.html"

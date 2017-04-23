@@ -30,9 +30,9 @@
 						<ul class="yrk_lower">
 							<li class="yrkmain">
 								<span>班级</span>
-								<ul>
-									<li><input type="radio" name="class" id="first" />1604A</li>
-									<li><input type="radio" name="class" id="second" />1604B</li>
+								<ul id="yrkUl">
+									<li>1604A</li>
+									<li>1604B</li>
 								</ul>
 							</li>
 						</ul>
@@ -55,7 +55,7 @@
 									<th>手机号</th>
 									<th style="width: 230px;">编辑</th>
 								</tr>
-								<tr ng-repeat = 'item in ary'>
+								<tr class="tr" ng-repeat = 'item in ary'>
 									<td>{{item.name}}</td>
 									<td>{{item.classnames}}</td>
 									<td>{{item.sex}}</td>
@@ -63,10 +63,20 @@
 									<td>
 										<button ui-sref="xiugai({id:item.Uid})">修改</button>
 										<button ui-sref="xiang({id:item.Uid})">详情</button>
-										<button on-click="del({id:item.Uid)">删除</button>
+										<button class="delBtn" id='{{item.Uid}}'>删除</button>
 									</td>
 								</tr>
 							</table>
+						</div>
+						<div class="yrkbox_bottom_right_g clearfix">
+							<!--<div class="yrkbox_bottom_right_g_left fl">
+								<p>当前页数：<span>{{totalPage}}</span></p>
+							</div>-->
+							<div class="yrkbox_bottom_right_g_right fr">
+								<p class="fl shang" ng-click="shang()">上一页</p>
+								<p class="fl next" ng-click='next'>下一页</p>
+								<p class="fl">共：<span>{{length}}</span>条</p>
+							</div>
 						</div>
 					</div>
 				</div>

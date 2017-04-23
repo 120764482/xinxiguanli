@@ -36,6 +36,7 @@ angular.module('xinxiApp')
 				url: "http://192.168.43.238:3560/gai/xiugaii",
 				type: "post",
 				data: {
+                    'Uid':id,
 					'Name': $('.username').val(),
 					'teachername': $('.theath').val(),
 					'classnames': $('.class').val(),
@@ -45,7 +46,7 @@ angular.module('xinxiApp')
 					'patriarccellphone': $('.jiazhangPhone').val(),
 					'dorm': $('.sushe').val(),
 					'studentUid': $('.id').val(),
-					'num': $('.jifen').val(),
+					'number': $('.jifen').val(),
 					'teacherlaoshi': $('.zhuanye').val(),
 					'sex': $scope.state,
 					'weiji': $('.weijiyuanyin').val(),

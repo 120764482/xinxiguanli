@@ -13,14 +13,14 @@
 				欢迎登录学生管理系统
 			</div>
 			<div class="m_sousuo">
-			<input type="text" placeholder="请输入关键字" value="" class="sousuo"><button id="sousuo" v>搜索</button>
+			<input type="text" placeholder="请输入关键字" value="" class="sousuo"><button id="sousuo">搜索</button>
 			</div>
 			<div class="m_nav">
 				<ul>
 					<li>班级:<span>1604a</span></li>
 					<li>姓名:<span></span></li>
-					<li><a href="guize.html" style="color:red">规则</a></li>
-					<li><a href="">退出登录</a></li>
+					<li><a ui-sref='guize' style="color:red">规则</a></li>
+					<li><a ui-sref='login'>退出登录</a></li>
 				</ul>
 			</div>
 	
@@ -29,25 +29,33 @@
 <!-- 主体部分开始 -->
       <div class="m_section">
 			   <!-- 列表展示部分 -->
-			  <table id="main"cellpadding="0" cellspacing="0">
+			  <table id="main" border="1" cellpadding="0" cellspacing="1" bordercolor="#fff">
 			      <tr height="35px">
-				  		<td>姓名</td>
-				  		<td>班级</td>
-				  		<td>性别</td>
-				  		<td>手机号</td>
-				  		<!-- <td>家庭住址</td>
-				  		<td>班主任姓名</td>
-				  		<td>授课老师</td>
-				  		<td>家长姓名</td>
-				  		<td>家长电话</td>
-				  		<td>宿舍号</td> -->
-				  		<td>分数</td>
-				  		<td>违纪情况</td>
-				  		<td>违纪时间</td>
-				  		<td>周考成绩</td>
-				  		<td>月考成绩</td>
+				  		<th>姓名</th>
+				  		<th>班级</th>
+				  		<th>性别</th>
+				  		<th>地址</th>
+				  		<th>手机号</th>
+				  		<!-- <th>家庭住址</th>
+				  		<th>班主任姓名</th>
+				  		<th>授课老师</th>
+				  		<th>家长姓名</th>
+				  		<th>家长电话</th>
+				  		<th>宿舍号</th> -->
+				  		<th>分数</th>
+				  		<th>违纪情况</th>
+				  		<th>违纪扣分</th>
+				  		<th>周考成绩</th>
+				  		<th>月考成绩</th>
 				  		</tr>
 				  </table>
+				  <div class="main_foot">
+				  	<div class="main_foot_right">
+				  		<p>上一页</p>
+				  		<p>下一页</p>
+				  		<p>共：<span>20</span>条</p>
+				  	</div>
+				  </div>
       </div>
 <!-- 主体部分结束 -->
 </div>

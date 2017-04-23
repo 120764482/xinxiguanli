@@ -327,7 +327,9 @@ img {
 }
 .yrkbox_bottom_right_f{
 	width: 99%;
-	height: 400px;
+	height: 363px;
+	overflow: auto;
+	border: 1px solid #fff;
 }
 .yrkbox_bottom_right_f table tr th{
 	width: 130px;
@@ -337,7 +339,7 @@ img {
 }
 .yrkbox_bottom_right_f table {
 	
-	border: 1px solid #fff;
+	/*border: 1px solid #fff;*/
 }
 .yrkbox_bottom_right_f table tr td{
 	width: 130px;
@@ -354,4 +356,35 @@ img {
 	border-radius: 5px;
 	margin-left: 6px;
 }
-
+.yrkbox_bottom_right_g{
+	width: 99%;
+	height: 60px;
+}
+.yrkbox_bottom_right_g_left{
+	width: 200px;
+	height: 60px;
+}
+.yrkbox_bottom_right_g_left p{
+	color: #fff;
+	font-size: 14px;
+	line-height: 60px;
+	margin-left: 30px;
+}
+.yrkbox_bottom_right_g_left p span{
+	color: red;
+}
+.yrkbox_bottom_right_g_right{
+	width: 300px;
+	height: 60px;
+}
+.yrkbox_bottom_right_g_right p{
+	color: #fff;
+	font-size: 14px;
+	line-height: 60px;
+	margin-left: 20px;
+	cursor: pointer;
+	
+}
+.yrkbox_bottom_right_g_right p span{
+	color: red;
+}

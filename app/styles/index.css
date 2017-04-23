@@ -107,7 +107,7 @@ img {
 /*主体开始*/
 .m_section{
 	width:80%;
-	height: 400px;
+	height: 490px;
 	background: linear-gradient(to bottom,#20272d,#1a3f38);
 	border: 1px solid #394144;
 	position: absolute;
@@ -122,23 +122,37 @@ img {
 	overflow: hidden;
 
 }
-#main{
- 	margin-top: 30px;
-   /* margin-left: 20px;*/
- }
-/* #main table{
- 	width:80%; 
- }
- #main tbody{
- 	width:80%; 
- }*/
-#main tbody tr td{
-	width: 110px;
+#main  tr th{
+	width: 116px;
+	height: 40px;
 	color: #fff;
 	text-align: center;
 	font-size: 12px;
-	margin-right: 10px;
-	margin-left: 10px;
 }
-
+#main  tr td{
+	width: 116px;
+	height: 40px;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+}
+.main_foot{
+	width: 100%;
+	height: 50px;
+}
+.main_foot_right{
+	width: 300px;
+	height: 50px;
+	float: right;
+	margin-right: 100px;
+}
+.main_foot_right p{
+	margin-left: 20px;
+	float: left;
+	padding-right: 20px;
+	line-height: 50px;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
 /*主体结束*/
