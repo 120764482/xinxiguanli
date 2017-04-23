@@ -79,34 +79,33 @@ angular.module('xinxiApp')
 >>>>>>> origin/master
 		
 		//搜索
-//			$('.ss').click(function(){
-////				alert(1)
-//				var search = $('#content').val();
-//				//获取输入框内容
-//				$.ajax({
-//					type:"get",
-//					url:"http://192.168.43.238:3560/list/cha",
-//					async:true,
-//					data:{
-//						sou:search
-//					},
-//					success:function(data){
-//						console.log(data);
-//	           
-//						$('tbody').children().remove();     //把子级清空
-//						var html="";
-//						for(var i=0;i<data.length;i++){
-//							html+='<tr><td>'+data[i].name+'</td><td>'+data[i].classnames+'</td><td>'+data[i].sex+'</td><td>'+data[i].cellphone+'</td><td><button ui-sref='+xiugai({id:item.Uid})+'>修改</button><button ui-sref='+xiang({id:item.Uid})+'>详情</button><button ui-sref='+del+'>删除</button></td></tr>'
-//						}
-//						$('.yrkbox_bottom_right_f tbody').append(html);
-//						
-//					},
-//					error:function(){
-//						alert("链接错误！")
-//					}
-//				});
-//				
-//			})
+			$('.ss').click(function(){
+				var c = $('#content').val();
+				//获取输入框内容
+				$.ajax({
+					type:"get",
+					url:"http://192.168.43.238:3560/list/cha",
+					async:true,
+					data:{
+						sou:c
+					},
+					success:function(data){
+						console.log(data);
+	           
+						$('tbody').children().remove();     //把子级清空
+						var html="";
+						for(var i=0;i<data.length;i++){
+							html+='<tr><td>'+data[i].name+'</td><td>'+data[i].classnames+'</td><td>'+data[i].sex+'</td><td>'+data[i].cellphone+'</td><td><button ui-sref='+xiugai({id:item.Uid})+'>修改</button><button ui-sref='+xiang({id:item.Uid})+'>详情</button><button class='+del+'>删除</button></td></tr>'
+						}
+						$('.yrkbox_bottom_right_f tbody').append(html);
+						
+					},
+					error:function(){
+						alert("链接错误！")
+					}
+				});
+				
+			})
 
 
 		
@@ -127,14 +126,17 @@ angular.module('xinxiApp')
 //		
 //		
 //		
-//		//删除
+		//删除
 //			$('body').delegate('.del','click',function(){
 //				var id = $(this).attr('Uid');   //获取id
 ////				alert(id)
 //				$.ajax({
 //					type:"get",
-//					url:"http://192.168.43.238:3560/list/del?id="+Uid,
+//					url:"http://http://192.168.43.238:3560/list/shan",
 //					async:true,
+//					data:{
+//						id:Uid
+//					},
 //					success:function(data){
 //						if(data.flag==1){
 //							alert('删除成功');
