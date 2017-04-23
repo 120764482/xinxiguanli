@@ -114,8 +114,7 @@ angular.module('xinxiApp')
 //		})
 //		
 //		
-//		
-<<<<<<< HEAD
+//	
 //		//删除
 //			$('body').delegate('.del','click',function(){
 //				var id = $(this).attr('Uid');   //获取id
@@ -139,10 +138,7 @@ angular.module('xinxiApp')
 //				});
 //				
 //			})
-=======
-	
->>>>>>> origin/master
-			
+
 			
         
 	}])
