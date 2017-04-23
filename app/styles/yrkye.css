@@ -338,8 +338,7 @@ img {
 	height: 40px;
 }
 .yrkbox_bottom_right_f table {
-	
-	/*border: 1px solid #fff;*/
+	border: 1px solid #fff;
 }
 .yrkbox_bottom_right_f table tr td{
 	width: 130px;

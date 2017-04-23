@@ -62,6 +62,7 @@ angular.module('xinxiApp')
 					url: "http://192.168.43.238:3560/list/list",
 					method: "get"
 				}).then(function(reqs) {
+					$scope.ary=[];
 					arr = reqs.data;
 					for(var i = 0; i < arr.length; i++) {
 						$scope.ary.push(arr[i]);
@@ -85,6 +86,7 @@ angular.module('xinxiApp')
 					url: "http://192.168.43.238:3560/list/list",
 					method: "get",
 				}).then(function(reqs) {
+					$scope.ary=[];
 					arr = reqs.data;
 					for(var i = 0; i < arr.length; i++) {
 						$scope.ary.push(arr[i]);
@@ -132,12 +134,21 @@ angular.module('xinxiApp')
 		})
 
 		//班级查询
-		var oUl = document.getElementById('yrkUl');
-		var oLi = oUl.getElementsByTagName('li');
-		for(var i = 0; i < oLi.length; i++) {
-			oLi[i].onclick = function() {
-				console.log(oLi[i].text())
-			};
-		}
+		$('#yrkUl>li').click(function() {
+			var txt = $(this).text();
+			$http({
+				url: "http://192.168.43.238:3560/list/ban?sou=" + txt,
+				method: "get"
+			}).then(function(reqs) {
+				//console.log(reqs)
+				$scope.ary = []
+				arr = reqs.data;
+				for(var i = 0; i < arr.length; i++) {
+					$scope.ary.push(arr[i]);
+				}
+			}, function(reqs) {
+				alert('失败')
+			})
+		});
 
 	}])
