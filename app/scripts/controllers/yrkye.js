@@ -22,11 +22,7 @@ angular.module('xinxiApp')
 			$(this).children("ul").slideUp(300)
 		})
 
-		
-		
-		
-		
-		
+	
 		
 		
 		//列表
@@ -44,9 +40,8 @@ angular.module('xinxiApp')
 		}, function(reqs) {
 			alert('失败')
 		})
-		
-		//删除
-		    //删除
+
+		   //删除
 	    $scope.del=function(id){		
 		$http({
 			url:"http://192.168.43.238:3560/list/shan/" + id.id,
@@ -55,11 +50,11 @@ angular.module('xinxiApp')
 				// _method:"delete"
 			}
 		}).then(function(req){
-			 // console.log(req);
+			 console.log(req);
 			 if(req.flag==1){
 			 	$('a[tel =' + id + ']').parent().remove();
 			 }		
-			// alert("删除成功")
+			alert("删除成功")
 			// location.reload();
 		},function(){
 			console.log("删除失败！");
@@ -121,32 +116,7 @@ angular.module('xinxiApp')
 //		
 //		
 //		
-		//删除
-//			$('body').delegate('.del','click',function(){
-//				var id = $(this).attr('Uid');   //获取id
-////				alert(id)
-//				$.ajax({
-//					type:"get",
-//					url:"http://http://192.168.43.238:3560/list/shan",
-//					async:true,
-//					data:{
-//						id:Uid
-//					},
-//					success:function(data){
-//						if(data.flag==1){
-//							alert('删除成功');
-//							$(this).parent().remove();
-//							window.location.reload();
-//						}else{
-//							alert('删除失败')
-//						}
-//					},
-//					errror:function(){
-//						alert('链接失败！')
-//					}
-//				});
-//				
-//			})
+	
 			
 			
         
