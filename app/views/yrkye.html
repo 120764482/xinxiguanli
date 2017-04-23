@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
+
 		<div ng-controller="jiaoshiCtrl" class="yrkbox">
 				<div class="yrkbox_top">
 					<div class="yrkbox_nav">
@@ -49,8 +43,8 @@
 						</div>
 						<div class="yrkbox_bottom_right_c">
 							<input type="text" id="content" placeholder="请输入要搜索的内容" />
-							<button class="ss">搜索</button>
-							<button class="add" ui-sref="add()">添加信息</button>
+							<button class="ss">搜索<tton>
+							<button class="add" ui-sref="add()">添加信息<tton>
 						</div>
 						<div class="yrkbox_bottom_right_f">
 							<table border="" cellspacing="" cellpadding="">
@@ -69,7 +63,7 @@
 									<td>
 										<button ui-sref="xiugai({id:item.Uid})">修改</button>
 										<button ui-sref="xiang({id:item.Uid})">详情</button>
-										<button ui-sref="del">删除</button>
+										<button on-click="del({id:item.Uid)">删除</button>
 									</td>
 								</tr>
 							</table>
@@ -78,5 +72,3 @@
 				</div>
 		</div>
 		
-	</body>
-</html>
