@@ -1,5 +1,5 @@
 angular.module('xinxiApp')
-	.controller('jiaoshiCtrl', ["$scope", "$http", "$location", function($scope, $http, $location) {
+	.controller('jiaoshiCtrl', ["$scope","$state", "$http", "$location", function($scope,$state, $http, $location) {
 
 		//上传图片
 		$(".image").click(function() {
@@ -22,21 +22,33 @@ angular.module('xinxiApp')
 			$(this).children("ul").slideUp(300)
 		})
 
+		
+		
+		
+		
+		
+		
+		
 		//列表
 		$scope.ary = [];
 		$http({
 			url: "http://192.168.43.238:3560/list/list",
 			method:"get"
 		}).then(function(reqs) {
+<<<<<<< HEAD
 			// console.log(reqs)
+=======
+			//console.log(reqs)
+>>>>>>> origin/master
 			arr = reqs.data;
 			for(var i = 0; i < arr.length; i++) {
-				$scope.ary.push(arr[i])
+				$scope.ary.push(arr[i]);
 			}
 		}, function(reqs) {
 			alert('失败')
 		})
 		
+<<<<<<< HEAD
 		//删除
 		    //删除
 	    $scope.del=function(id){		
@@ -59,7 +71,86 @@ angular.module('xinxiApp')
 	 }
 		
 		
+=======
+		//详情
+//		$('body').delegate('.xiang','click',function(){
+//			$location.href='xiang?id='+$(this).attr('id')
+//		})
+>>>>>>> origin/master
 		
+		//搜索
+//			$('.ss').click(function(){
+////				alert(1)
+//				var search = $('#content').val();
+//				//获取输入框内容
+//				$.ajax({
+//					type:"get",
+//					url:"http://192.168.43.238:3560/list/cha",
+//					async:true,
+//					data:{
+//						sou:search
+//					},
+//					success:function(data){
+//						console.log(data);
+//	           
+//						$('tbody').children().remove();     //把子级清空
+//						var html="";
+//						for(var i=0;i<data.length;i++){
+//							html+='<tr><td>'+data[i].name+'</td><td>'+data[i].classnames+'</td><td>'+data[i].sex+'</td><td>'+data[i].cellphone+'</td><td><button ui-sref='+xiugai({id:item.Uid})+'>修改</button><button ui-sref='+xiang({id:item.Uid})+'>详情</button><button ui-sref='+del+'>删除</button></td></tr>'
+//						}
+//						$('.yrkbox_bottom_right_f tbody').append(html);
+//						
+//					},
+//					error:function(){
+//						alert("链接错误！")
+//					}
+//				});
+//				
+//			})
+
+
 		
+		//查找
+//		$('#first').click(function(){
+//			$.ajax({
+//				type:"get",
+//				url:"http://192.168.43.238:3560/list/cha",
+//				async:true,
+//				success:function(data){
+//					
+//				},
+//				error:function(){
+//					alert('链接失败！');
+//				}
+//			});
+//		})
+//		
+//		
+//		
+//		//删除
+//			$('body').delegate('.del','click',function(){
+//				var id = $(this).attr('Uid');   //获取id
+////				alert(id)
+//				$.ajax({
+//					type:"get",
+//					url:"http://192.168.43.238:3560/list/del?id="+Uid,
+//					async:true,
+//					success:function(data){
+//						if(data.flag==1){
+//							alert('删除成功');
+//							$(this).parent().remove();
+//							window.location.reload();
+//						}else{
+//							alert('删除失败')
+//						}
+//					},
+//					errror:function(){
+//						alert('链接失败！')
+//					}
+//				});
+//				
+//			})
+			
+			
         
 	}])
