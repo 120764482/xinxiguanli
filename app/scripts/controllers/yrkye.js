@@ -28,7 +28,7 @@ angular.module('xinxiApp')
 			url: "http://192.168.43.238:3560/list/list",
 			method:"get"
 		}).then(function(reqs) {
-			console.log(reqs)
+			// console.log(reqs)
 			arr = reqs.data;
 			for(var i = 0; i < arr.length; i++) {
 				$scope.ary.push(arr[i])
@@ -37,7 +37,26 @@ angular.module('xinxiApp')
 			alert('失败')
 		})
 		
-		//
+		//删除
+		    //删除
+	    $scope.del=function(id){		
+		$http({
+			url:"http://192.168.43.238:3560/list/shan/" + id.id,
+			method:"POST",
+			data: {
+				// _method:"delete"
+			}
+		}).then(function(req){
+			 // console.log(req);
+			 if(req.flag==1){
+			 	$('a[tel =' + id + ']').parent().remove();
+			 }		
+			// alert("删除成功")
+			// location.reload();
+		},function(){
+			console.log("删除失败！");
+		})
+	 }
 		
 		
 		

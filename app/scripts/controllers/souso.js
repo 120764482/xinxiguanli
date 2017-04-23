@@ -11,6 +11,7 @@ angular.module('xinxiApp')
   .controller('sousoCtrl', function () {
        //   //搜索 
   			 $('#sousuo').click(function() {
+  			 	alert('1');
           	   var  str=$('.sousuo').val()
           		$.ajax({
 					type:"get",
