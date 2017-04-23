@@ -326,24 +326,26 @@ img {
 	right: 8%;
 }
 .yrkbox_bottom_right_f{
-	width: 100%;
+	width: 99%;
 	height: 400px;
 }
-.yrkbox_bottom_right_f table{
-	width: 98%;
-	height: 404px;
-	margin: 1px auto;
-	border: 1px dashed #fff;
-	color: #fff;
-}
 .yrkbox_bottom_right_f table tr th{
-	height: 40px;
+	width: 130px;
 	text-align: center;
+	color: #fff;
+	height: 40px;
+}
+.yrkbox_bottom_right_f table {
+	
+	border: 1px solid #fff;
 }
 .yrkbox_bottom_right_f table tr td{
-	height: 30px;
+	width: 130px;
 	text-align: center;
+	color: #fff;
+	height: 40px;
 }
+
 .yrkbox_bottom_right_f table td button{
 	width: 54px;
 	height: 22px;

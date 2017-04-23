@@ -1,6 +1,8 @@
 angular.module('xinxiApp')
 	.controller('jiaoshiCtrl', ["$scope", "$state", "$http", "$location", function($scope, $state, $http, $location) {
-
+             var username = localStorage.user;
+             $('#Controller').html(username)
+             $('#Controllerr').html(username)
 			//上传图片
 			$(".image").click(function() {
 				$("#file").click();
