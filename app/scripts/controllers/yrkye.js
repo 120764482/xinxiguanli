@@ -37,7 +37,6 @@ angular.module('xinxiApp')
 		}).then(function(reqs) {
 			// console.log(reqs)
 			//console.log(reqs)
-           origin/master
 			arr = reqs.data;
 			for(var i = 0; i < arr.length; i++) {
 				$scope.ary.push(arr[i]);
@@ -73,7 +72,6 @@ angular.module('xinxiApp')
 //		$('body').delegate('.xiang','click',function(){
 //			$location.href='xiang?id='+$(this).attr('id')
 //		})
- origin/master
 		
 		//搜索
 			$('.ss').click(function(){
