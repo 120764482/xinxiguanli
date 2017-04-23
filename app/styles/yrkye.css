@@ -328,7 +328,6 @@ img {
 .yrkbox_bottom_right_f{
 	width: 100%;
 	height: 400px;
-	overflow-y: auto;
 }
 .yrkbox_bottom_right_f table{
 	width: 98%;
@@ -337,11 +336,11 @@ img {
 	border: 1px dashed #fff;
 	color: #fff;
 }
-.yrkbox_bottom_right_f table th{
+.yrkbox_bottom_right_f table tr th{
 	height: 40px;
 	text-align: center;
 }
-.yrkbox_bottom_right_f table td{
+.yrkbox_bottom_right_f table tr td{
 	height: 30px;
 	text-align: center;
 }
