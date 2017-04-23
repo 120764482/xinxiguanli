@@ -7,7 +7,7 @@ angular.module('xinxiApp')
 			url: "http://192.168.43.238:3560/geren/xinxi?Uid="+id,
 			type: "get",
 			success: function(reqs) {
-				console.log(reqs)
+				//console.log(reqs)
 				$('.username').val(reqs[0].name);
 				$('.theath').val(reqs[0].teachername);
 				$('.class').val(reqs[0].name);
