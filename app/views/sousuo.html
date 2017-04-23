@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 	<title>搜索</title>
+	<link rel="stylesheet" type="text/css" href="css/sousuo.css">
 </head>
 <body>
 <div class="div" ng-controller="sousuoCtrl">
@@ -14,14 +15,9 @@
 			<div class="m_sousuo">
 			<input type="text" placeholder="请输入关键字" value="" class="sousuo"><button id="sousuo" v>搜索</button>
 			</div>
-	<!-- 		<div class="m_nav">
-				<ul>
-					<li>班级:<span>1604a</span></li>
-					<li>姓名:<span></span></li>
-					<li><a href="guize.html" style="color:red">规则</a></li>
-					<li><a href="">退出登录</a></li>
-				</ul>
-			</div> -->
+			<div class="m_nav">
+				<p class="sy"><a href="">首页</a></p>
+			</div>
 	
 	</div>
 <!-- 头部结束 -->
@@ -51,25 +47,25 @@
 <!-- 主体部分结束 -->
 </div>
 // <script type="text/javascript">
-// 			 $.ajax({
-// 			 	type: "get",
-// 			 	// 拼字符串：?userId+id  
-// 			 	url: "http://localhost:8005/look/list",	
-// 				// data:{
-// 				// 		'val':str
-// 				// 	},				
-// 			 	success: function(e) {					
-// 			       var html='';
-// 			  for(var i=0;i<e.length;i++){
-//       		       	 html+="<tr height='35px' click='btn' id='"+e[i].id+"'><td color:'#fff'>"+e[i].name+"</td><td color:'#fff'>"+e[i].classnames+"</td><td color:'#fff'>"+e[i].sex+"</td><td color:'#fff'>"+e[i].cellphone+"</td><td color:'#fff'>"+e[i].teachlaoshi+"</td><td color:'#fff'>"+e[i].patriarchname+"</td><td color:'#fff'>"+e[i].patriarccellphone+"</td><td color:'#fff'>"+e[i].dorm+"</td><td color:'#fff'>"+e[i].number+"</td></tr>"
+			 $.ajax({
+			 	type: "get",
+			 	// 拼字符串：?userId+id  
+			 	url: "http://localhost:8005/look/list",	
+				// data:{
+				// 		'val':str
+				// 	},				
+			 	success: function(e) {					
+			       var html='';
+			  for(var i=0;i<e.length;i++){
+      		       	 html+="<tr height='35px' click='btn' id='"+e[i].id+"'><td color:'#fff'>"+e[i].name+"</td><td color:'#fff'>"+e[i].classnames+"</td><td color:'#fff'>"+e[i].sex+"</td><td color:'#fff'>"+e[i].cellphone+"</td><td color:'#fff'>"+e[i].teachlaoshi+"</td><td color:'#fff'>"+e[i].patriarchname+"</td><td color:'#fff'>"+e[i].patriarccellphone+"</td><td color:'#fff'>"+e[i].dorm+"</td><td color:'#fff'>"+e[i].number+"</td></tr>"
 
-// 						}
-// 					$("#m_section").append(html);
-// 			 	},
-// 			 	error: function() {
-// 			 		alert("失败")
-// 			 	}
-// 			 })
+						}
+					$("#m_section").append(html);
+			 	},
+			 	error: function() {
+			 		alert("失败")
+			 	}
+			 })
 // </script>
 </body>
 </html>
