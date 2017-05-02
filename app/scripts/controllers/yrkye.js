@@ -1,5 +1,15 @@
 angular.module('xinxiApp')
-	.controller('jiaoshiCtrl', ["$scope", "$state", "$http", "$location", function($scope, $state, $http, $location) {
+	.controller('jiaoshiCtrl', ["$scope", "$state", "$timeout", "$http", "$location", function($scope, $state, $timeout, $http, $location) {
+		if(localStorage==''){
+			alert(1)
+			//$location.path('/login')
+			//window.location='login'
+			//$state.href('login')
+		}
+		$('.tuichu').click(function(){
+			localStorage.clear();
+		})
+		
 		var username = localStorage.user;
 		$('#Controller').html(username)
 		$('#Controllerr').html(username)
@@ -16,13 +26,6 @@ angular.module('xinxiApp')
 			})
 		})
 
-		//下拉
-		//		$(".yrkmain").hover(function() {
-		//			$(this).children("ul").stop().slideToggle(200)
-		//			$(this).children("ul").slideDown(300)
-		//		}, function() {
-		//			$(this).children("ul").slideUp(300)
-		//		})
 		$scope.pageNow = 1;
 		$scope.page = 8;
 		$scope.totalPage = 0;
@@ -32,14 +35,21 @@ angular.module('xinxiApp')
 			url: "http://192.168.43.238:3560/list/list",
 			method: "get"
 		}).then(function(reqs) {
-			arr = reqs.data;
-			$scope.length = arr.length
-			for(var i = 0; i < arr.length; i++) {
-				$scope.ary.push(arr[i]);
+			if(reqs.flag == 1) {
+				alert('请先登录');
+				$state.go('login');
+			} else {
+				//console.log(reqs)
+				arr = reqs.data;
+				$scope.length = arr.length
+				for(var i = 0; i < arr.length; i++) {
+					$scope.ary.unshift(arr[i]);
+				}
+				$scope.ary = $scope.ary.slice(($scope.pageNow - 1) * $scope.page, $scope.pageNow * $scope.page);
 			}
-			$scope.ary = $scope.ary.slice(($scope.pageNow - 1) * $scope.page, $scope.pageNow * $scope.page);
+
 		}, function(reqs) {
-			alert('失败')
+			//alert('失败')
 		})
 
 		$http({
@@ -62,7 +72,7 @@ angular.module('xinxiApp')
 					url: "http://192.168.43.238:3560/list/list",
 					method: "get"
 				}).then(function(reqs) {
-					$scope.ary=[];
+					$scope.ary = [];
 					arr = reqs.data;
 					for(var i = 0; i < arr.length; i++) {
 						$scope.ary.push(arr[i]);
@@ -70,7 +80,7 @@ angular.module('xinxiApp')
 					}
 					$scope.ary = $scope.ary.slice(($scope.pageNow - 1) * $scope.page, $scope.pageNow * $scope.page);
 				}, function(reqs) {
-					alert('失败')
+					//alert('失败')
 				})
 
 			}
@@ -86,7 +96,7 @@ angular.module('xinxiApp')
 					url: "http://192.168.43.238:3560/list/list",
 					method: "get",
 				}).then(function(reqs) {
-					$scope.ary=[];
+					$scope.ary = [];
 					arr = reqs.data;
 					for(var i = 0; i < arr.length; i++) {
 						$scope.ary.push(arr[i]);
@@ -100,31 +110,62 @@ angular.module('xinxiApp')
 		//搜索
 		$('.ss').click(function() {
 			var c = $('#content').val();
-			$http({
-				url: "http://192.168.43.238:3560/list/cha?sou=" + c,
-				method: "get"
-			}).then(function(reqs) {
-				$scope.ary = []
-				arr = reqs.data;
-				for(var i = 0; i < arr.length; i++) {
-					$scope.ary.push(arr[i]);
-				}
-			}, function(reqs) {
-				alert('失败')
-			})
+			if($('#content').val() == '') {
+                $('.zhezhao').css('display', 'block').html('请填写搜索的内容');
+				setTimeout(function() {
+					$('.zhezhao').css('display', 'none');
+					//location.reload()
+				}, 1000)
+			} else {
+				$http({
+					url: "http://192.168.43.238:3560/list/cha?sou=" + c,
+					method: "get"
+				}).then(function(reqs) {
+					$scope.ary = []
+					arr = reqs.data;
+					for(var i = 0; i < arr.length; i++) {
+						$scope.ary.push(arr[i]);
+					}
+				}, function(reqs) {
+					//alert('失败')
+				})
+			}
 		});
 		//删除
+		$scope.uId = '';
 		$('body').delegate('.delBtn', 'click', function() {
-			var uId = $(this).attr('id');
-			var index = $('.delBtn').index(this)
+			$scope.uId = $(this).attr('id');
+			$('.zhee').css('display', 'block');
+			//			var index = $('.delBtn').index(this)
+			//			$.ajax({
+			//				url: "http://192.168.43.238:3560/list/shan?id=" + $(this).attr('id'),
+			//				type: "post",
+			//				success: function(data) {
+			//					//console.log(data)
+			//					if(data.flag == '1') {
+			//						//alert('删除成功')
+			//						$('.tr')[index].remove();
+			//						location.reload();
+			//					} else {
+			//						alert('删除失败')
+			//					}
+			//				},
+			//				error: function(data) {}
+			//			})
+		})
+		$('body').delegate('.que', 'click', function() {
+			//console.log($scope.uId)
+			//var index = $('.delBtn').index(this)
 			$.ajax({
-				url: "http://192.168.43.238:3560/list/shan?id=" + $(this).attr('id'),
+				url: "http://192.168.43.238:3560/list/shan?id=" + $scope.uId,
 				type: "post",
 				success: function(data) {
 					//console.log(data)
 					if(data.flag == '1') {
 						//alert('删除成功')
-						$('.tr')[index].remove();
+						//$('.tr')[index].remove();
+						$('.zhee').css('display', 'none');
+						location.reload();
 					} else {
 						alert('删除失败')
 					}
@@ -132,23 +173,176 @@ angular.module('xinxiApp')
 				error: function(data) {}
 			})
 		})
-
-		//班级查询
-		$('#yrkUl>li').click(function() {
+		$('body').delegate('.qu', 'click', function() {
+				$('.zhee').css('display', 'none');
+			})
+			//班级查询
+		$('body').delegate('.add_li', 'click', function() {
+			$(this).css({
+				'color': '#37be57',
+				'font-size': '18px'
+			}).parent().siblings().find('p').css({
+				'color': '#000',
+				'font-size': '14px'
+			});
 			var txt = $(this).text();
 			$http({
 				url: "http://192.168.43.238:3560/list/ban?sou=" + txt,
 				method: "get"
 			}).then(function(reqs) {
 				//console.log(reqs)
-				$scope.ary = []
-				arr = reqs.data;
-				for(var i = 0; i < arr.length; i++) {
-					$scope.ary.push(arr[i]);
+				if(reqs.data == '') {
+					$('.zhezhao').css('display', 'block').html('暂无数据');
+					setTimeout(function() {
+						$('.zhezhao').css('display', 'none');
+					}, 1000)
+				} else {
+					$timeout(function() {
+						//更新$scope数据/界面的代码
+						$scope.ary = []
+						arr = reqs.data;
+						for(var i = 0; i < arr.length; i++) {
+							$scope.ary.push(arr[i]);
+						}
+					});
+
 				}
+
+				//				$scope.ary = $scope.ary.slice(($scope.pageNow - 1) * $scope.page, $scope.pageNow * $scope.page);
 			}, function(reqs) {
 				alert('失败')
 			})
 		});
+
+		var timers = null;
+		$scope.ofocus = function() {
+			timers = setInterval(function() {
+				if($scope.oPhone == '') {
+					$http({
+						url: "http://192.168.43.238:3560/list/list",
+						method: "get"
+					}).then(function(reqs) {
+						//console.log(reqs.data)
+						arr = reqs.data;
+						//$scope.length = arr.length
+						//$scope.length = arr.length
+						for(var i = 0; i < arr.length; i++) {
+							$scope.ary.push(arr[i]);
+						}
+						$scope.ary = $scope.ary.slice(($scope.pageNow - 1) * $scope.page, $scope.pageNow * $scope.page);
+						clearInterval(timers)
+					}, function(reqs) {
+						//alert('失败')
+					})
+				}
+			}, 500)
+		}
+		$scope.oblur = function() {
+			clearInterval(timers)
+		}
+
+		$scope.ayr = [];
+		$http({
+			url: "http://192.168.43.238:3560/banji/banji",
+			method: "get"
+		}).then(function(reqs) {
+			//console.log(reqs)
+			arr = reqs.data;
+			//$scope.length = arr.length
+			for(var i = 0; i < arr.length; i++) {
+				$scope.ayr.push(arr[i]);
+			}
+		}, function(reqs) {
+			//alert('失败')
+		})
+
+		$('.class_add').click(function() {
+			//alert(1)
+			var add_ban = $('.add_ban').val()
+			if($('.add_ban').val() == '') {
+				$('.zhezhao').css('display', 'block').html('请填写班级');
+				setTimeout(function() {
+					$('.zhezhao').css('display', 'none');
+					//location.reload()
+				}, 1000)
+			} else {
+				$.ajax({
+					url: "http://192.168.43.238:3560/banji/add",
+					type: "post",
+					data: {
+						banji: add_ban
+					},
+					success: function(data) {
+						console.log(data)
+						if(data.flag == 1) {
+							$('.zhezhao').css('display', 'block').html('添加成功');
+							setTimeout(function() {
+								$('.zhezhao').css('display', 'none');
+								location.reload()
+							}, 1000)
+						} else if(data.flag == 2) {
+							$('.zhezhao').css('display', 'block').html('添加失败');
+							setTimeout(function() {
+								$('.zhezhao').css('display', 'none');
+							}, 1000)
+						} else {
+							$('.zhezhao').css('display', 'block').html('添加失败');
+							setTimeout(function() {
+								$('.zhezhao').css('display', 'none');
+							}, 1000)
+						}
+
+					},
+					error: function(data) {}
+				})
+			}
+		})
+
+		//删除班级
+		$scope.delClass = '';
+		$('body').delegate('.del_class', 'click', function() {
+			$('.zheee').css('display', 'block');
+			$scope.delClass = $(this).siblings("p").text();
+			//			//$('.zhee').css('display', 'none');
+			//			//alert(1)
+			//			$.ajax({
+			//				url: "http://192.168.43.238:3560/banji/shan?banji=" +deiClass,
+			//				type: "post",
+			//				success: function(data) {
+			//					//console.log(data)
+			//					if(data.flag == '1') {
+			//						//alert('删除成功')
+			//						//$('.tr')[index].remove();
+			//						$('.zhee').css('display', 'none');
+			//						location.reload();
+			//					} else if(data.flag == 2){
+			//						alert('删除失败')
+			//					}
+			//				},
+			//				error: function(data) {}
+			//			})
+		})
+		$('body').delegate('.quu', 'click', function() {
+			$('.zheee').css('display', 'none');
+		})
+		$('body').delegate('.quee', 'click', function() {
+			//console.log($scope.delClass)
+			$.ajax({
+				url: "http://192.168.43.238:3560/banji/shan?banji=" + $scope.delClass,
+				type: "post",
+				success: function(data) {
+					//console.log(data)
+					if(data.flag == '1') {
+						//alert('删除成功')
+						//$('.tr')[index].remove();
+						$('.zheee').css('display', 'none');
+						location.reload();
+					} else if(data.flag == 2) {
+						alert('删除失败')
+					}
+				},
+				error: function(data) {}
+			})
+		})
 
 	}])
